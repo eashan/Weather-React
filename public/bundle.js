@@ -28506,9 +28506,18 @@
 
 	var About = function About(props) {
 	  return React.createElement(
-	    'h3',
+	    'div',
 	    null,
-	    ' About Component'
+	    React.createElement(
+	      'h3',
+	      null,
+	      ' About '
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      ' Welcome to the About Page'
+	    )
 	  );
 	};
 
@@ -28533,9 +28542,18 @@
 	//For Stateless Components
 	var Examples = function Examples(props) {
 	  return React.createElement(
-	    'h3',
+	    'div',
 	    null,
-	    ' Examples '
+	    React.createElement(
+	      'h3',
+	      null,
+	      ' Examples '
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      ' Welcome to Examples Page'
+	    )
 	  );
 	};
 	module.exports = Examples;
