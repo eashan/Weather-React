@@ -1,26 +1,23 @@
-/*import React from 'react';
-import ReactDOM from 'react-dom';
 
-const main = () => {
-
-  return (
-    <div>
-      <h1> Hello React!</h1>
-    </div>
-  );
-
-
-};
-*/
 var express = require('express');
 
 var app = express();
+const PORT = process.env.PORT || 3000;
 
+app.use(function(req, res, next){
+  if(req.headers['x-forwarded-proto'] === 'http'){
+    next();
+
+  }
+  else{
+    res.redirect('http://'+req.hostname+req.url);
+  }
+});
 app.use(express.static('public'));
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
 
   //ReactDOM.render(<main />, document.querySelector('container'));
-  console.log('Express Server is active');
+  console.log('Express Server is active on port '+ PORT);
 
 });
