@@ -11,7 +11,7 @@ var React = require('react');
 //For Stateless Components
 var Examples = (props)=>{
   return(
-    <h3> Examples Component</h3>
+    <h3> Examples </h3>
   );
 };
 module.exports = Examples;
