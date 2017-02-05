@@ -28590,28 +28590,47 @@
 
 	var React = __webpack_require__(8);
 
-	// var Examples = React.createClass({
-	//
-	//   render: function(){
-	//     return(
-	//       <h3> Examples Component</h3>
-	//     );
-	//   }
-	// })
+	var _require = __webpack_require__(185),
+	    Link = _require.Link;
+
 	//For Stateless Components
+
+
 	var Examples = function Examples(props) {
 	  return React.createElement(
 	    'div',
 	    null,
 	    React.createElement(
-	      'h3',
-	      null,
+	      'h1',
+	      { className: 'text-center' },
 	      ' Examples '
 	    ),
 	    React.createElement(
 	      'p',
 	      null,
-	      ' Welcome to Examples Page'
+	      ' Here are a few example Locations to try out'
+	    ),
+	    React.createElement(
+	      'ol',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Mumbai' },
+	          'Mumbai'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Rio' },
+	          'Rio'
+	        )
+	      )
 	    )
 	  );
 	};
@@ -28646,11 +28665,14 @@
 	    null,
 	    React.createElement(Nav, null),
 	    React.createElement(
-	      'h2',
-	      null,
-	      ' Main component'
-	    ),
-	    props.children
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
 	  );
 	};
 	module.exports = Main;
