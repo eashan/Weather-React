@@ -20,7 +20,7 @@ var DisplayWeather = ({temp,city})=>{
   return(
     <div>
 
-      <h2>Temperature in {city} is {temp}</h2>
+      <h2 className="text-center">Temperature in {city} is {temp}</h2>
 
     </div>
   );

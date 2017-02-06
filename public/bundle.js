@@ -26987,7 +26987,7 @@
 	      } else if (isError) {
 	        return React.createElement(
 	          'h3',
-	          null,
+	          { className: 'text-center' },
 	          'Invalid City'
 	        );
 	      }
@@ -26997,7 +26997,7 @@
 	      null,
 	      React.createElement(
 	        'h1',
-	        null,
+	        { className: 'text-center' },
 	        'Get Weather'
 	      ),
 	      React.createElement(WeatherForm, { onNewRequest: this.handleWeatherRequest }),
@@ -27037,7 +27037,7 @@
 	        React.createElement("input", { type: "text", ref: "City" }),
 	        React.createElement(
 	          "button",
-	          null,
+	          { className: "hollow button expanded" },
 	          "Get Weather"
 	        )
 	      )
@@ -27051,7 +27051,7 @@
 /* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -27076,14 +27076,14 @@
 	      city = _ref.city;
 
 	  return React.createElement(
-	    'div',
+	    "div",
 	    null,
 	    React.createElement(
-	      'h2',
-	      null,
-	      'Temperature in ',
+	      "h2",
+	      { className: "text-center" },
+	      "Temperature in ",
 	      city,
-	      ' is ',
+	      " is ",
 	      temp
 	    )
 	  );

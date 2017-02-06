@@ -52,12 +52,12 @@ var Weather = React.createClass({
         return   <DisplayWeather city={city} temp={temp} />
       }
       else if(isError){
-        return <h3>Invalid City</h3>
+        return <h3 className="text-center">Invalid City</h3>
       }
     }
     return(
       <div>
-        <h1>Get Weather</h1>
+        <h1 className="text-center">Get Weather</h1>
         <WeatherForm onNewRequest={this.handleWeatherRequest}/>
         {renderMessage()}
       </div>

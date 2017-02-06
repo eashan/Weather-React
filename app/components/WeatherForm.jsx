@@ -7,7 +7,7 @@ var WeatherForm = React.createClass({
     var temp = 25;
     if(city.length > 0)
     {
-      this.props.onNewRequest(city,temp);      
+      this.props.onNewRequest(city,temp);
     }
   },
   render: function(){
@@ -15,7 +15,7 @@ var WeatherForm = React.createClass({
       <div>
         <form onSubmit={this.handleWeatherRequest}>
           <input type="text" ref="City" />
-          <button>Get Weather</button>
+          <button className="hollow button expanded">Get Weather</button>
         </form>
 
       </div>
